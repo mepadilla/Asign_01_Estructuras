@@ -1,0 +1,4 @@
+# 1) Utilizar funciones para resolver por partes el problema, puede ser una función por cada requerimiento.
+# 2) Para encontrar elementos únicos, se puede pensar en un conjunto o diccionario. Muy bien la conversión de la lista a un conjunto.
+# 3) 
+
