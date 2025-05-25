@@ -30,7 +30,7 @@ def leer_txt(archivo):
     return lst_txt_b
     print('ARCHIVO DE TEXTO CARGADO')
 #
-while seleccion != 9:
+while seleccion != 7:
     print('\n')
     print('* * * MENU DE OPCIONES PARA ANALISIS DE INVENTARIO * * *')
     print('Introduzca el numero de la opcion requerida.')
@@ -39,12 +39,12 @@ while seleccion != 9:
     print('3 - Determine el producto con mayor stock')
     print('4 - Calcule el valor total del inventario (stock × precio)')
     print('5 - Identifique al proveedor con más productos en inventario')
-    print('6 - enere un informe de productos con stock menor a un umbral dado')
-    print('9 - Finalizar ejecucion del programa\n')
-    seleccion = int(input("INTRODUZCA LA OCION REQUERIDA: "))
+    print('6 - Genere un informe de productos con stock menor a un umbral dado')
+    print('7 - Finalizar ejecucion del programa\n')
+    seleccion = int(input("INTRODUZCA LA OPCION REQUERIDA: "))
     #INICIO DE OPERACIONES
     if lectura == 0 or seleccion == 1:
-        leer_txt("horarios.txt")
+        leer_txt("inventario.txt")
         lectura = 1
         continuar = str(input("* * PRESIONE ENTER PARA CONTINUAR * * \n"))
     if  seleccion == 2:
@@ -63,12 +63,8 @@ while seleccion != 9:
         print('OPCION SEIS TOMADA')
         continuar = str(input("* * PRESIONE ENTER PARA CONTINUAR * * \n"))
     if  seleccion == 7:
-        print('OPCION SIETE TOMADA')
-        continuar = str(input("* * PRESIONE ENTER PARA CONTINUAR * * \n"))
-    if  seleccion == 8:
-        print('OPCION OCHO TOMADA')
-        continuar = str(input("* * PRESIONE ENTER PARA CONTINUAR * * \n"))
-    if  seleccion == 9:
-        print('OPCION NUEVE TOMADA')
-        continuar = str(input("* * PRESIONE ENTER PARA CONTINUAR * * \n"))
+        print("* * * SISTEMA TERMINADO * * *")
+
+
+
 
