@@ -91,7 +91,7 @@ while seleccion != 9:
         lst_hor=[]
         for indice in range(len(lst_txt_b)):
             lst_hor.append(lst_txt_b[indice][6])
-        print('secc02\n')
+        print('* * EN DESARROLLO * *\n')
         #print(lst_hor)
         continuar = str(input("* * PRESIONE ENTER PARA CONTINUAR * * \n"))
     if seleccion == 4:

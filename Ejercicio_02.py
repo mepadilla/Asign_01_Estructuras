@@ -13,8 +13,17 @@
 #6. Implemente un menú interactivo para acceder a cada función.
 lectura = 0
 seleccion = 0
-lst_txt_b = []
+lst_txt_b = []      #Lista con lineas del txt
+lst_cat_prod = []   #Lista con categorias de productos y productos
+lst_cat =[]         #Lista con categorias de producto
+dic_cat_prod = {}      #Diccionario con categoria como indice y productos como elementos
+lst_prod_aux = []
 # SECCION DE DEFINICION DE FUNCIONES
+#
+#FUNCION PARA IMPRIMIR LISTAS
+def print_list(lista_in):
+    for elemento in lista_in:
+        print(elemento)
 #
 # FUNCION PARA LEER ARCHIVO TXT
 def leer_txt(archivo):
@@ -25,10 +34,24 @@ def leer_txt(archivo):
     # print(lst_txt_b)
     print('\n')
     print("LISTA CON LINEAS CARGADAS DEL ARCHIVO DE TEXTO\n")
-    for elemento in lst_txt_b:
-        print(elemento)
+    print_list(lst_txt_b)
     return lst_txt_b
     print('ARCHIVO DE TEXTO CARGADO')
+# Esta funcion lee una lista de listas dada y retorna una lista con los elementos internos de cada lista en las
+# dos posiciones dadas
+def list_append_two(listatxt,posicion1,posicion2):
+    lst_aux=[]
+    for indice in range(len(listatxt)):
+        lst_aux.append(listatxt[indice][posicion1])
+        lst_aux.append(listatxt[indice][posicion2])
+    return lst_aux
+# Esta funcion lee una lista de listas dada y retorna una lista con los elementos internos de cada lista en la
+# posicion dada
+def list_append_one(listatxt,posicion1):
+    lst_aux=[]
+    for indice in range(len(listatxt)):
+        lst_aux.append(listatxt[indice][posicion1])
+    return lst_aux
 #
 while seleccion != 7:
     print('\n')
@@ -48,6 +71,13 @@ while seleccion != 7:
         lectura = 1
         continuar = str(input("* * PRESIONE ENTER PARA CONTINUAR * * \n"))
     if  seleccion == 2:
+        lst_cat_prod=list_append_two(lst_txt_b,1,2)
+        lst_cat=list(set(list_append_one(lst_txt_b,1)))
+        dic_day_a = {'LU': ['LUNES','Martes'], 'MA': 'MARTES', 'MI': 'MIERCOLES', 'JU': 'JUEVES', 'VI': 'VIERNES'}
+        print(lst_cat_prod)
+        print(lst_cat)
+        #dic_cat_prod = {'clave1':lst_prod_aux[]
+
         print('OPCION DOS TOMADA')
         continuar = str(input("* * PRESIONE ENTER PARA CONTINUAR * * \n"))
     if  seleccion == 3:
