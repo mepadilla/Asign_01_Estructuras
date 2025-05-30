@@ -16,8 +16,9 @@ seleccion = 0
 lst_txt_b = []      #Lista con lineas del txt
 lst_cat_prod = []   #Lista con categorias de productos y productos
 lst_cat =[]         #Lista con categorias de producto
-dic_cat_prod = {}      #Diccionario con categoria como indice y productos como elementos
-lst_prod_aux = []
+dic_cat_prod = {}   #Diccionario con categoria como indice y productos como elementos
+lst_prod_aux = []   #Lista auxiliar de productos
+#
 # SECCION DE DEFINICION DE FUNCIONES
 #
 #FUNCION PARA IMPRIMIR LISTAS
@@ -73,11 +74,20 @@ while seleccion != 7:
     if  seleccion == 2:
         lst_cat_prod=list_append_two(lst_txt_b,1,2)
         lst_cat=list(set(list_append_one(lst_txt_b,1)))
-        dic_day_a = {'LU': ['LUNES','Martes'], 'MA': 'MARTES', 'MI': 'MIERCOLES', 'JU': 'JUEVES', 'VI': 'VIERNES'}
         print(lst_cat_prod)
         print(lst_cat)
         #dic_cat_prod = {'clave1':lst_prod_aux[]
-
+        for indice in range(len(lst_cat)):
+            #print(lst_cat[indice])
+            flag=0
+            for indice2 in range(len(lst_cat_prod)):
+                if lst_cat[indice] == lst_cat_prod[indice2]:
+                    if flag == 0:
+                        print('Categoria de producto: ' + str(lst_cat[indice]))
+                        flag=1
+                    else:
+                        print('\t' + str(lst_cat_prod[indice2+1]))
+        print(dic_cat_prod)
         print('OPCION DOS TOMADA')
         continuar = str(input("* * PRESIONE ENTER PARA CONTINUAR * * \n"))
     if  seleccion == 3:
